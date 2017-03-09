@@ -1,0 +1,2 @@
+bulletImg = nil
+bullets = {}
