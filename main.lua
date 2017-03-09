@@ -1,7 +1,6 @@
 debug = true
 
-require('src.entities.player')
-require('src.functions.escape')
+require('src.bootstrap')
 
 function love.load(arg)
     player.img = love.graphics.newImage('assets/plane.png')
