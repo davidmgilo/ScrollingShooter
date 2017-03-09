@@ -12,7 +12,9 @@ end
 -- update & draw are called on every frame
 -- dt -> measures how much time has passed between frames
 function love.update(dt)
-
+    if love.keyboard.isDown('escape') then
+        love.event.push('quit')
+    end
 end
 
 function love.draw(dt)
