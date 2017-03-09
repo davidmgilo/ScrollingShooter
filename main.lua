@@ -1,6 +1,7 @@
 debug = true
 
-require('entities.player')
+require('src.entities.player')
+require('src.functions.escape')
 
 function love.load(arg)
     player.img = love.graphics.newImage('assets/plane.png')
@@ -8,9 +9,7 @@ end
 -- update & draw are called on every frame
 -- dt -> measures how much time has passed between frames
 function love.update(dt)
-    if love.keyboard.isDown('escape') then
-        love.event.push('quit')
-    end
+    escape()
 
     if love.keyboard.isDown('left','a') then
         player.x = player.x - (player.speed*dt)
