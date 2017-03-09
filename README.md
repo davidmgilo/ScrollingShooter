@@ -1,6 +1,6 @@
 #Scrolling Shooter
 
-Game made with LÖVE
+Game made with [LÖVE](https://love2d.org/)
 
 ##Credits
 
