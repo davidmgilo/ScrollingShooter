@@ -1,10 +1,6 @@
 debug = true
 
-player = {
-    x = 200,
-    y = 710,
-    img = nil
-}
+require('entities.player')
 
 function love.load(arg)
     player.img = love.graphics.newImage('assets/plane.png')
@@ -14,6 +10,12 @@ end
 function love.update(dt)
     if love.keyboard.isDown('escape') then
         love.event.push('quit')
+    end
+
+    if love.keyboard.isDown('left','a') then
+        player.x = player.x - (player.speed*dt)
+    elseif love.keyboard.isDown('right','d') then
+        player.x = player.x + (player.speed*dt)
     end
 end
 
