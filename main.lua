@@ -9,12 +9,7 @@ end
 -- dt -> measures how much time has passed between frames
 function love.update(dt)
     escape()
-
-    if love.keyboard.isDown('left','a') then
-        player.x = player.x - (player.speed*dt)
-    elseif love.keyboard.isDown('right','d') then
-        player.x = player.x + (player.speed*dt)
-    end
+    move(dt)
 end
 
 function love.draw(dt)
