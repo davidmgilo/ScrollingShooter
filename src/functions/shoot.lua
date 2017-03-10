@@ -4,7 +4,7 @@ function shoot(dt)
         canShoot = true
     end
 
-    if love.keyboard.isDown('space', 'rctrl', 'lctrl', 'ctrl') and canShoot then
+    if love.keyboard.isDown(' ', 'rctrl', 'lctrl', 'ctrl') and canShoot then
         -- Create some bullets
         newBullet = { x = player.x + (player.img:getWidth()/2), y = player.y, img = bulletImg }
         table.insert(bullets, newBullet)
